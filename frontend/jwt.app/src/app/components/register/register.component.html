@@ -1,0 +1,21 @@
+
+<div class="container">
+    <input type="checkbox" id="check">
+    <div class="login form">
+      <header>Signup</header>
+      <form [formGroup]="form" (submit)="submit()">
+        <input formControlName = "name" type="text" placeholder="Enter your username">
+        <input formControlName = "email" type="text" placeholder="Enter your email">
+        <input formControlName = "password" type="password" placeholder="Enter your password">
+        
+        <a href="#">Forgot password?</a>
+        <input type="submit" class="button" value="Signup">
+      </form>
+      <div class="signup">
+        <span class="signup">Already have an account?
+         <label for="check">Login</label>
+        </span>
+      </div>
+    </div>
+    
+  </div>

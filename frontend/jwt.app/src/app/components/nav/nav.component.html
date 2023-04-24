@@ -1,0 +1,79 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img
+            src="https://w7.pngwing.com/pngs/658/1000/png-transparent-nft-non-fungible-token-crypto-currency-business-blockchain.png"
+            height="35"
+            alt="MDB Logo"
+            loading="lazy"
+          />
+        </a>
+        <!-- Left links -->
+     
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+  
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <!-- Icon -->
+        <a class="text-reset me-3" href="#">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+  
+        <!-- Notifications -->
+        
+        <!-- Avatar -->
+        <div>
+          
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngIf="!authenticated">
+                <li class="nav-item">
+                  <a class="nav-link" routerLink ="/login">LOGIN</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink ="/register">REGISTER</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"></a>
+                </li>
+              </ul>
+
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngIf="authenticated">
+                <li class="nav-item">
+                  <a class="nav-link" routerLink ="/login" (click)="logout()" >LOGOUT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink ="/profile"  >PROFILE</a>
+                </li>
+                <li class="nav-item">
+                 
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"></a>
+                </li>
+              </ul>
+        </div>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->

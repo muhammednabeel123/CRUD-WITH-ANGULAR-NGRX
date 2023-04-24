@@ -1,0 +1,28 @@
+<div class="card" style="height: 50vh; margin: 5rem;">
+    <h1>Hello</h1>
+    <form #empForm (ngSubmit)=" onSubmit()">
+        <div class="row">
+            <div class="col-md-4">
+                <label>Name</label>
+                <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="data.name" required>
+            </div>
+            <div class="col-md-4">
+                <label>Mail</label>
+                <input type="text" class="form-control" name="email" [(ngModel)]="data.email" required>
+            </div>
+            <div class="col-md-4">
+                <label>password</label>
+                <input type="password" class="form-control" name="password"  [(ngModel)]="data.password"  required>
+            </div>
+            <br><br><br>
+            <div style="text-align: right;" >
+                <input type="file" (change)="onFileSelected($event)">
+            </div>
+            <div style="text-align: center;">
+                <button type="submit" class="btn btn-success">submit</button>
+            </div>
+
+            <br><br><br>
+        </div>
+    </form>
+</div>

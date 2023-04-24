@@ -1,0 +1,35 @@
+<app-header></app-header>
+<button mat-raised-button (click)="openAddEditForm()">Add User</button>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Image</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="(users$ | async) as userdata">
+          <tr *ngFor="let user of userdata ; let i = index">
+            <th scope="row">{{ i+1 }}</th>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+           
+            
+            <td><img src="{{url+user.image}}" class="rounded-circle img-fluid" alt="user image" style="height: 40px;width: 40px;"></td>
+            <td>
+              
+              <button type="button" class="btn btn-success" (click)="onEdit(user._id)">EDIT</button>&nbsp;&nbsp;
+              <button type="button" class="btn btn-danger" (click)="onDelete(user._id)">DELETE</button>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
